@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+  counter-reset: section;                    /* On initialise le compteur à 0 */
+}
+main div#bar{
+	padding:246px;
+    background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/img/bola.jpg");
+    background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/img/bola.jpg"); /* The least supported option. */
+    background-position: 30px;
+}
+main div button{
+	position: absolute;
+	background-color:#007bff;
+	border:none;
+	padding:12px;
+	border-radius:4px;
+	bottom:0px;
+    right: 0;
+    width: 500px;
+    box-shadow: 3px 4px 1px 6px white;
+}
+main a{
+	background-color:#4f0093;
+	color:white;
+	border-radius:10px;
+	padding:8px;
+	margin:12px;
+}
+main .h4{
+	margin-top:50px;
+    font-weight: bold
+}
+main h1{
+    font-family: 'Patrick Hand'
+}
+main #seconddiv{
+	width:50%;
+	margin:auto;
+}
+main #slicedivr{
+	background: #FCFCF7;
+    transform: skew(0,-3deg);
+    padding: 18px;
+    position: relative;
+    top: 44px;;	
+}
+main #slicedivf{
+	background: #FCFCF7;
+    transform: skew(0,3deg);
+    padding: 28px;
+    position: relative;
+    top: 98px;
+}
+/*
+article::after{
+    content: "";
+    position: absolute;
+    display: block;
+    border-radius: 134px;
+    width: 196px;
+    height: 100px;
+    top: 58px;
+    right: -23px;
+    transform: rotate(159deg);
+    background: #007bff;
+}
+
+article::before{
+	content: "";
+    position: absolute;
+    display: block;
+    border-radius: 150px;
+    width: 196px;
+    height: 100px;
+    top: 308px;
+    right: -23px;
+    transform: rotate(159deg);
+    background:#4f0093;
+}
+#done::after{
+	content: "";
+    position: absolute;
+    display: block;
+    border-radius: 150px;
+    width: 291px;
+    height: 88px;
+    top: 326px;
+    right: 349px;
+    transform: rotate(163deg);
+    background: #4f0093;
+}
+article::before{
+	content: "";
+    position: absolute;
+    display: block;
+    border-radius: 150px;
+    width: 291px;
+    height: 88px;
+    top: 306px;
+    right: 349px;
+    transform: rotate(163deg);
+    background:#007bff;
+}
+*/
+main article{
+    border-top: 1px solid #4f0093;
+}
+main #tdiv{
+	background-color:#fcfcf7;
+	padding:100px;
+}
+main #videocv img{
+	width:50px;
+	height:50px;
+    border-radius: 100px;
+    margin-left:50px;
+    margin-bottom:30px;
+}
+main div div#tdiv{
+	width: 60%;
+	margin:auto;
+
+}
+main ol{
+	list-style-type: none;
+	display: flex;
+	margin-top:60px;
+}
+main ol li{
+	width: 33.3%;
+	padding: 10px
+}
+
+main ol li::before{
+    counter-increment: section;
+    content: counter(section) ".";
+    color: #4f0093;
+    font-family: "Agrandir Tight",Arial,Helvetica,sans-serif;
+    font-weight: 500;
+    font-size: 31px;
+    line-height: 40.05px;
+    margin-right: 10px;
+    background-color: #a3e5fd;
+    padding: 9px;
+    border-radius: 100%;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-bottom: ;
+}
+main div ul {
+  list-style-type:none;
+}
+main div i{
+	color:#00a0ff;
+
+}
+main div li {
+	margin:10px;
+}
+main #bar-video{
+    padding: 90px;
+    background-color:#fcfcf7;
+    margin-top: -31px;
+    border-top:1px solid #4f0093;
+
+}
+main #done{
+	background-color:#fcfcf7;
+    border-radius:4px;
+}
+main #doneb{
+	background-color:#fcfcf7;
+    padding:80px;
+    border-radius: 4px;
+    position: relative;
+    z-index: -11;
+}
+/*
+span::after{
+	content: "";
+    position: absolute;
+    display: block;
+    border-radius: 150px;
+    width: 291px;
+    height: 88px;
+    top: 300px;
+    right: 349px;
+    transform: rotate(163deg);
+    background:red;
+}*/
+main article{
+    padding: 100px;
+   background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/img/fond.webp"); /* The least supported option. */
+
+    
+}
+main #recruteur i{
+    color:#009cff;
+}
+
+main #b_slicedivr{
+    background: #FCFCF7;
+    transform: skew(0,3deg);
+    padding: 26px;
+    position: relative;
+    top: -104px;
+}
+
+main #b_slicedivf{
+    background: #FCFCF7;
+    transform: skew(0,-2deg);
+    padding: 28px;
+    position: relative;
+    top: -58px;
+}
+
+main .avantages{
+    background-color: #4f568c;
+    width: 500px;
+    margin: auto;
+    border-radius: 20px;
+    color: white;
+    padding: 20px;
+}
+main p{
+    color:#3f3d3d
+}

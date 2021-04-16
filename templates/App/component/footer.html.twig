@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <link href="{{ asset('css/page/footer.css') }}" rel="stylesheet"/>  
+  </head>
+   <body>
+    <div id="footer"></div>
+  	<footer>
+      <div class="row">
+        <div class="col-md-3">
+          <h3 class="h3 font-weight-bold">Links:</h3>
+          <ul>
+            <a href="{{path('signin')}}">
+              <li> Sign in</li>
+            </a>
+            <a href="{{path('signup')}}">
+              <li>Sign up </li>
+            </a>
+            <a href="{{path('home')}}"><li>Home </li></a>
+            <a href="{{path('video')}}">
+              <li> Video</li>
+            </a>
+            <a href="{{path('recruter')}}">
+              <li>Annonce </li>
+            </a>
+            <a href="{{path('user')}}">
+              <li>Profil </li>
+            </a>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h3 class="font-weight-bold text-center">Follow us:
+          </h3>
+          <h4 class="text-center linksa">
+            <a>
+              <img src="{{asset('img/facebook.png')}}"> Facebook
+            </a>
+            <a>
+              <img src="{{asset('img/youtube.png')}}"> Youtube
+            </a>
+            <a>
+              <img src="{{asset('img/twitter.png')}}"> Twitter
+            </a>
+          </h4>
+          <p class="text-center">
+            Suivez nous sur les reseaux sociaux </br>enfim que vous pouvez être informé de votre aventuelle activité .
+          </p>
+        </div>
+        <div class="col-md-3">
+          <h4 class="text-center">Newsletter</h4>
+          <p class="text-center ">En vous encrivant vous nous sinalé aussi que vous voulez 
+            <strong class="text-primary">
+               travailler chez Wojob
+            </strong>
+          </p>
+          <div>
+            <div class="login_bar">
+              <input class="login text-dark" placeholder="Email">
+              <span class="subscribe_button" onclick="subscribeOnClick()">subscribe
+              </span>
+              <span class="subscribing"></span>
+              <span class="thanks">
+               Thank you. You have been subscribed
+              </span>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <p class="text-center">&copy WOJOB ALL RIGHT RESERVED 2021 
+          <a>    -Conditions générales</a> 
+          <a>-Politique de confidentialité</a>
+        </p>
+        <hr>
+      </div>
+      <!-- studio annonce -->
+      <div id="studioAnnonce">
+        <div id="stutioAnnonceA">
+          <p>
+            <span id="closeButtonAnnonce">x</span>
+          </p>
+          <p style="color:#007bff">
+          Je suis un recruteur je vais:
+          </p>
+          <h1 class="h3 text-white text-center  font-weight-bold">
+            <i class="fas fa-bullhorn">
+            </i>
+          Faire un annonce
+          </h1>
+          <h2 class="h4 text-white">
+           Nom de l'entreprise:
+          </h2>
+          <input class="form-control" type="text" placeholder="Ex.:Wojob" name="entreprise"/>
+          <h2 class="h4 text-white">Numero de l'entreprise:
+          </h2>
+          <input class="form-control" type="text" placeholder="Ex.:07xxxxx " name="tel">
+          <h2 class="h4 text-white">
+            <i class="fas fa-file-signature">
+            </i> Contrat :
+            <select name="contrat">
+              <option value="cdd">
+                CDD
+              </option>
+              <option value="cdi">
+                CDI
+              </option>
+              <option value="freelance">
+                Freelance
+              </option>
+              <option value="autre">
+               Autre
+              </option>
+            </select> 
+          </h2>
+          <h2 class="h4 text-white">Je cherche:</h2>
+          <input class="form-control" type="text" name="title" placeholder="ex.:un informatique dans le web" id="entreprise">
+          <hr>
+          <h2 class="h4 text-white">
+            <i class="fas fa-map-marker-alt"></i>Adress de l'entreprise:
+          </h2>
+          <p class="text-white">
+            <strong>Ville:
+              <input type="text" placeholder="Ex:Paris" name="city">
+            </strong>
+            <strong>Code Postal:
+              <input type="number" placeholder="Ex:75001" name="codePostal" pattern="[0-9]*">
+            </strong>
+          </p>
+          <p class="text-white">
+            <strong> Adress:
+              <input name="adress" placeholder="35 rue du rhone">
+            </strong>
+          </p>
+          <h2 class="h4 text-white">Salaire:
+           <span class="text-danger">20$/</span>
+           <select name="mois">
+             <option>heure</option>
+             <option>Mois</option>
+           </select>
+          </h2>
+          <input min ="0" type="range" max="100000"name="salaire">
+          <hr>
+          <div id="description">
+            <h2 class="h4 text-white">LA MISSION:</h2>
+            <textarea placeholder=" Descrivez en quelques mots la mission que vouz proposez:" name="mission">
+             
+            </textarea>
+            <h2 class="h4 text-white">
+             Profil recherché
+            </h2>
+            <textarea placeholder=" Descrivez en quelques mots la mission que vouz proposez:" name="profil">
+            </textarea>
+          </div>
+          <button id="publier">
+           Ajouter un job(annonce)
+          </button>
+          <button id="preview" style="background-color:#663399">
+            preview mon annonce
+          </button>
+        </div>
+        <div id="studioAnnonceB"></div>
+        <div id="done">
+           <img src='/img/done.jpg' class='imgAjax'>
+           <p class='text-center text-success '>Votre annonce fut publié</p>
+           <p id="back">
+            <i class='fas fa-long-arrow-alt-left' >
+            </i>
+             GO back 
+           </p>
+           <p class="text-center" id="seeAnnonce">
+            <a href="#" >Voir mon annonce</a>
+           </p>
+        </div>
+      </div>
+    <!--- studio cv --->
+      <div id="studioVideoCv">
+        <p>
+          <span id="closeVideoCv">x</span>
+        </p>
+        <p style="color:#007bff" classs="font-weight-bold">
+         Je suis un candidat je vais:
+        </p>
+      <form onsubmit="submitFnc(event)" id="formVideo">
+        <!-- publier cv -->
+        <h1 class="h3 text-white text-center font-weight-bold ">
+          <i class="fas fa-video"style="color:#4f0093"></i>
+          Publier ma video cv
+        </h1>
+        <h2 class="h4 text-white">
+          <i class="fas fa-user-md"></i>
+          Moi je suis:
+        </h2>
+        <input class="form-control" type="text" placeholder="Ex.:traducteur en anglais" id="title_v" required>
+
+        <h2 class="h4 text-white">
+          <i class="fas fa-phone-volume"></i> Appelez-moi aux:
+        </h2>
+        <input class="form-control" type="number" placeholder="Ex.:07xxxxxxx" id="tel_v" required>
+        <p class="text-white">
+          <strong>
+            <i class="fas fa-map-marker-alt"></i>Ville:
+            <input class="form-control"type="text" placeholder="Ex:Paris" id="city_v" required>
+          </strong>
+          <strong>
+            <i class="fas fa-mail-bulk"></i>Code Postal:
+            <input class="form-control" type="number" placeholder="Ex:75001" id="codePostal_v" pattern="[0-9]*" required="">
+          </strong>
+        </p>
+        <!-- upload cv-->
+
+        <div class="dropzone text-center">
+            <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+           <!-- <input type="file" class="upload-input notRequired"  />-->
+          </div>
+          <p class="text-white text-center">Upload ma video 
+            <strong class="text-danger">cv(*obrigatoire)</strong>
+          </p>
+          <p id="cvideo">
+            <input id="sortpicture" type="file" name="sortpic" required />
+          </p>
+          <p class="text-white text-center">Upload cv en pdf 
+            <strong class="text-success">cv(*optionnelle)
+            </strong>
+          </p>
+        <button id="upload" type="submit">Publier ma video cv</button>
+        <button id="preview" style="background-color:#663399">previw ma  video cv</button>
+      </div>
+       <input type="hidden" name="annonceUrl" value="{{path('makeannone')}}" >
+     </form>
+       <input type="hidden" id="seeAnnonce" value="{{path('infojob')}}">
+       <input type="hidden" id="uploadUrl" value="{{path('upload')}}">
+  	</footer>
+    <div id="full"></div>
+<!-- modal -->
+</body>
+<script src="{{asset('js/uploadAjax.js')}}"> 
+</script>
+<html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    {% for annonceInfo in annonce %}
+    <a  class="lastAnnonce" href="{{path('infojob')}}?id={{annonceInfo.id}}">
+      <article>
+        <h2> 
+          <strong class="m-2 text-white">
+            JE CHERCHE UN/E:
+          </strong>
+          {{annonceInfo.title|upper}}
+        </h2>
+        <p>
+          <strong class="m-2 text-primary">Mission: 
+          </strong>
+          {{annonceInfo.mission|capitalize}}
+        </p>
+        <h3 class="h5">
+          <i class="fas fa-map-marker-alt">
+          </i>
+          <span>{{annonceInfo.city|capitalize}}
+          </span>
+        </h3>
+        <p>
+          <span class="contrat">{{annonceInfo.contrat|upper}}
+          </span>
+          <span class="money">{{annonceInfo.salaire}}$/Brut
+          </span> 
+          <span class="text-dark">
+            <i class="fas fa-eye"></i>
+          </span>
+        </p>
+        </article>
+     </a>
+    {% endfor %}
+    </main>
+  </body>
+<html>

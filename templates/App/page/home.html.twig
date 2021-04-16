@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'App/signInUp/links.html.twig' %}
+    <link href="{{ asset('css/page/home.css') }}" rel="stylesheet"/>
+
+  </head>
+  <body>
+  	<header>
+       {% include 'App/component/nav.html.twig'%}
+  	</header>
+  	<main>
+      <div id="bar">
+       <h1 class="text-white text-center"> ça jamais était si facile pour trouver le job de vos rêves <br>et un candidat motivé.Avec Wojob vous pouvez désormais <br> trouver un job ou  trouver un candidat</h1>
+      </div>
+      <div class="text-center" id="seconddiv">
+        <h2 class="h4 m-4">C'EST QUOI WOJOB ?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc fringilla dolor purus, sit amet eleifend enim venenatis vitae. Cras commodo vestibulum ante, sit amet tincidunt odio cursus quis.eleifend enim venenatis vitae. Cras commodo vestibulum ante, sit amet tincidunt odio cursus quis.
+        </p>
+      
+        <p class="text-center m-5 text-white " >
+          <a href="{{path('video')}}" style="background-color:#a3e5fd">see all video </a> <a style="cursor: pointer;" id="studioVideoCvButton">  publier video cv</a> 
+          <a  id="studioAnnonceButton" style="cursor: pointer;"> je faire un annonce </a>
+        </p>
+       
+      </div>
+      <div id="slicedivf"></div>
+      <div id="slicedivr"></div>      
+      <div class="text-center" id="tdiv">
+        <div>
+           <h3 class="h5">Le recrutement freelance enfin simple et rapide</h3>
+          <ol>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere cursus elementum. Vivamus lacinia eu lacus dictum porta. Etiam aliquam eros sed condimentum laoreet
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere cursus elementum. Vivamus lacinia eu lacus dictum porta. Etiam aliquam eros sed condimentum laoreet.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec posuere cursus elementum. Vivamus lacinia eu lacus dictum porta. Etiam aliquam eros sed condimentum laoreet.
+            </li>
+          </ol>
+        </div>
+      </div>
+      <article>
+        <section id="articleSection"></section>
+     </article>
+      <div class="row" id="bar-video">
+        <div class="col-md-6 text-center">
+           <h4 class="h6  font-weight-bold avantages" >MES AVANTAGES AVEC WOJOB</h4>
+            <ul>
+              <li>
+                 <i class="far fa-check-circle"></i>
+                  Lorem ipsum dolor sit amet
+              </li>
+               <li>
+                <i class="far fa-check-circle"></i>
+                  Lorem ipsum dolor sit amet
+              </li>
+               <li>
+                <i class="far fa-check-circle"></i>
+                  Lorem ipsum dolor sit amet
+              </li>
+               <li>
+                <i class="far fa-check-circle"></i>
+                  Lorem ipsum dolor sit amet
+              </li>
+            </ul>
+        </div>
+        <div class="col-md-6 text-center">
+          <h4>Comment ça marche?</h4>
+          <p class="text-center">Voici une vidéo pour vous aider à se familiariser avec wojob, dans cette vidéo nous vous motrons <br> comment publier votre vidéo cv , comment chercher un job et si vous êtes un recruteur ,<br>ceci va vous aider à compreendre comme chercher un candidat et faire un annonce</p>
+           <iframe width="700" height="415" src="https://www.youtube.com/embed/cNGdc66T-3E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+             
+           </iframe>
+        </div>
+     </div>
+      <div id="b_slicedivf"></div>
+      <div id="b_slicedivr"></div>
+  	</main>  	
+   {% include 'App/component/footer.html.twig' %}
+  </body>
+<html>
