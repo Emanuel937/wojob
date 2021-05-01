@@ -2,11 +2,15 @@
 
 body {
   counter-reset: section;                    /* On initialise le compteur à 0 */
+  overflow-x: hidden;
+}
+main{
+  margin-bottom:9%;
 }
 main div#bar{
 	padding:246px;
     background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/img/bola.jpg");
-    background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/img/bola.jpg"); /* The least supported option. */
+    background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/img/bola.jpg"), url("/img/work.jpg"); /* The least supported option. */
     background-position: 30px;
 }
 main div button{
@@ -135,18 +139,19 @@ main ol li{
 main ol li::before{
     counter-increment: section;
     content: counter(section) ".";
-    color: #4f0093;
+    color: #a3e5fd;
     font-family: "Agrandir Tight",Arial,Helvetica,sans-serif;
     font-weight: 500;
     font-size: 31px;
     line-height: 40.05px;
     margin-right: 10px;
-    background-color: #a3e5fd;
     padding: 9px;
     border-radius: 100%;
     padding-left: 13px;
     padding-right: 13px;
-    margin-bottom: ;
+    background:linear-gradient(rgba(150, 158, 223, 0.8), rgba(230, 96, 153, 0.8));
+    border:3px solid #a3e5fd;
+    
 }
 main div ul {
   list-style-type:none;
@@ -191,7 +196,7 @@ span::after{
 }*/
 main article{
     padding: 100px;
-   background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/img/fond.webp"); /* The least supported option. */
+   background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 193, 0.8));
 
     
 }
@@ -226,3 +231,137 @@ main .avantages{
 main p{
     color:#3f3d3d
 }
+/**  phone animation */
+
+.Phone {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 1em;
+    height: 1em;
+    font-size: 5vmin;
+    background-color: #5934db;
+    border-radius: 4px;
+    box-shadow:
+      0 0 0 0em rgba(#3498db, 0),
+      0em 0.05em 0.1em rgba(rgb(100, 11, 136), 0.2);
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.5;
+    border:1px solid white;
+  }
+  
+  .Phone::before,
+  .Phone::after {
+    position: absolute;
+    content: "";
+  }
+  
+  .Phone::before {
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    background-color: rgba(#fff, 0.1);
+    border-radius: 100%;
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(0);
+  }
+  
+  .Phone::after {
+    top: 0.25em;
+    left: 0.25em;
+    width: 0.5em;
+    height: 0.5em;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTYuNiAxMC44YzEuNCAyLjggMy44IDUuMSA2LjYgNi42bDIuMi0yLjJjLjMtLjMuNy0uNCAxLS4yIDEuMS40IDIuMy42IDMuNi42LjUgMCAxIC40IDEgMVYyMGMwIC41LS41IDEtMSAxLTkuNCAwLTE3LTcuNi0xNy0xNyAwLS42LjQtMSAxLTFoMy41Yy41IDAgMSAuNCAxIDEgMCAxLjIuMiAyLjUuNiAzLjYuMS40IDAgLjctLjIgMWwtMi4zIDIuMnoiIGZpbGw9IiNmZmZmZmYiLz48L3N2Zz4=);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate3d(0, 0, 0);
+  }
+  
+  .Phone.is-animating {
+    animation: phone-outer 3000ms infinite;
+    
+   
+  }
+  .Phone.is-animating::before {
+    animation: phone-inner 3000ms infinite;
+  }
+  
+  .Phone.is-animating::after {
+    animation: phone-icon 3000ms infinite;
+  }
+  
+  @keyframes phone-outer {
+    0% {
+      transform: translate3d(0, 0, 0) scale(1.3);
+      box-shadow:
+        0 0 0 0em rgba(#3498db, 0),
+        0em 0.05em 0.1em rgba(#000000, 0.2);
+    }
+    33.3333% {
+      transform: translate3d(0, 0, 0) scale(1.1);
+      box-shadow:
+        0 0 0 0em rgba(#3498db, 0.1),
+        0em 0.05em 0.1em rgba(#000000, 0.5);
+    }
+    66.6666% {
+      transform: translate3d(0, 0, 0) scale(1.3);
+      box-shadow:
+        0 0 0 0.5em rgba(#3498db, 0),
+        0em 0.05em 0.1em rgba(#000000, 0.2);
+    }
+    100% {
+      transform: translate3d(0, 0, 0) scale(1.3);
+      box-shadow:
+        0 0 0 0em rgba(#3498db, 0),
+        0em 0.05em 0.1em rgba(#000000, 0.2);
+    }
+  }
+  
+  @keyframes phone-inner {
+    0% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(0);
+    }
+    33.3333% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(0.9);
+    }
+    66.6666% {
+      opacity: 0;
+      transform: translate3d(0, 0, 0) scale(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translate3d(0, 0, 0) scale(0);
+    }
+  }
+  
+  @keyframes phone-icon {
+    0% { transform: translate3d(0em, 0, 0); }
+    2% { transform: translate3d(0.01em, 0, 0); }
+    4% { transform: translate3d(-0.01em, 0, 0); }
+    6% { transform: translate3d(0.01em, 0, 0); }
+    8% { transform: translate3d(-0.01em, 0, 0); }
+    10% { transform: translate3d(0.01em, 0, 0); }
+    12% { transform: translate3d(-0.01em, 0, 0); }
+    14% { transform: translate3d(0.01em, 0, 0); }
+    16% { transform: translate3d(-0.01em, 0, 0); }
+    18% { transform: translate3d(0.01em, 0, 0); }
+    20% { transform: translate3d(-0.01em, 0, 0); }
+    22% { transform: translate3d(0.01em, 0, 0); }
+    24% { transform: translate3d(-0.01em, 0, 0); }
+    26% { transform: translate3d(0.01em, 0, 0); }
+    28% { transform: translate3d(-0.01em, 0, 0); }
+    30% { transform: translate3d(0.01em, 0, 0); }
+    32% { transform: translate3d(-0.01em, 0, 0); }
+    34% { transform: translate3d(0.01em, 0, 0); }
+    36% { transform: translate3d(-0.01em, 0, 0); }
+    38% { transform: translate3d(0.01em, 0, 0); }
+    40% { transform: translate3d(-0.01em, 0, 0); }
+    42% { transform: translate3d(0.01em, 0, 0); }
+    44% { transform: translate3d(-0.01em, 0, 0); }
+    46% { transform: translate3d(0em, 0, 0); }
+  }
+

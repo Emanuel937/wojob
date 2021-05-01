@@ -4,7 +4,7 @@
 
 ::file-selector-button {
     font: inherit;
-    background-color: #639;
+    background-color:#44038614;
     color: white;
     border: none;
     padding: 9px;
@@ -56,7 +56,6 @@ footer .btn:hover {
 }
 
 footer #studioAnnonce{
-	background-color:#000000;
 	padding: 30px;
 	width: 0;
 	height: 100%;
@@ -66,10 +65,12 @@ footer #studioAnnonce{
 	overflow: hidden;
 	transition: .5s ease;
 	overflow: scroll;
+	background: rgb(63,94,251);
+	background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(238, 70, 252) 100%); 
+	background-repeat: no-repeat;
+	background-size:cover;
 }
-
-footer #studioVideoCv{
-   	background-color:#000000;
+footer #studioVideoCv{  	
 	padding: 30px;
 	width:0px;
 	height: 100%;
@@ -79,13 +80,14 @@ footer #studioVideoCv{
 	overflow: hidden;
 	transition: .5s ease;
 	overflow: scroll;
+	background: rgb(63,94,251);
+	background:radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(238, 70, 252) 100%); 
+	overflow-x: hidden;
 }
 
 footer #studioVideoCv .form-control{
-	border:none;
+	border: 1px solid white;
 	background-color: transparent;
-	border-bottom: 1px solid white;
-	height: 22px;
 	color:white;
 }
 footer .h3{
@@ -167,7 +169,6 @@ footer{
 }
 #footer{
 	padding: 50px;
-	margin-top: 200px;
 	background-color:#4f568c
 
 }
@@ -204,7 +205,7 @@ footer ul a {
 	border-radius: 10px;
 	top: 50%;
 	position: relative;
-  z-index: 1;
+    z-index: 0;
 	overflow: hidden;
 }
 
@@ -312,23 +313,25 @@ footer ul a {
 	        transform: translateY(-50px);
 }
 .imgAjax{
-	width: 38%;
+	width: 28%;
 	display: block;
 	margin: auto;
     margin-top: auto;
 	margin-top: 50%;
+	border-radius:100%
 }
 
 #done{
 	display:none;
 }
-#full{
-	background:white;
-	opacity: 0.6;
-	position: fixed;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: -1;
+.text-danger-close{
+	color: #f4f1f1 !important;
+	background-color: #6059fb;
+	padding-bottom: 5px;
+	padding-left: 13px;
+	padding-right: 13px;
+	border-radius: 100%;
+	padding-top: -1px;
+	border: 1px solid white;
+	box-shadow: 7px 0px 1px 1px #f5ccf959;
 }

@@ -33,7 +33,7 @@ class MakeAnnonceScript {
         // check if the annonce already exist
          $isFind = $this->thisAnnonceExist($repository,$mission,$profil,$tel,$indefient);
          if($isFind == "200"){
-         	$res ="This annonce already exist";
+         	$res ="wojob200";
          }else{
          	// this annonce not exist yet...
          	if(!empty($session)){
@@ -48,7 +48,6 @@ class MakeAnnonceScript {
 			$annonce->setProfil($profil);
 			$annonce->setCity($city);
 			$annonce->setCodePostal($codePostal);
-			$annonce->setAdress($adress);
 			$annonce->setMois($mois);
 			$arg->persist($annonce);
 			$arg->flush();
@@ -61,7 +60,7 @@ class MakeAnnonceScript {
 	         	}
 	         }else{
 	         	// the user is not connect
-	         	$res = "The user is not connect";
+	         	$res = "wobojb-4";
 	         }
 
 	         }
