@@ -10,25 +10,17 @@
   	</header>
   	<main>
       <div class=" row">
-        <div class="card col-md-2" style="border-bottom:none">
-          <img  class="card-img-top"  src="{{asset('img/cv.png')}}" alt="Card image cap"
-           style="width: 100px;margin: auto;">
+        <div class="card col-md-3" style="border-bottom:none">
             <div class="card-body">
-              <h5 class="card-title font-weight-bold text-center">
-                Cv video 
-               <i class="fas fa-video"></i>
-              </h5>
               <p class="text-center">
                 Désormais vous pouvez trouver votre candidat toute en  regardant sa videod'apresentation  avec
                 <span style="color:#4f0093" class="font-weight-bold">
-                  cv video studio
+                  cv video studio <i class="fas fa-video"></i>
                 </span> 
-              </p>  
+              </p>   
               <p> 
                 <span class="text-primary font-weight-bold">
-                  VOUS CHERCHEZ QUOI 
-                  <i class="fas fa-question" style="color:#4f0093">
-                  </i>
+                  Je cherche: 
                 </span> 
                 <input type="text" class="form-control" name="search_candidat" placeholder="métier, mots-clé">
               </p>
@@ -51,9 +43,9 @@
             </button>
             </div>
           </div>
-          <div class="col-md-10 "  id="title" style="background-color:#f0f2f5;">
+          <div class="col-md-9 "  id="title" style="background-color:#f0f2f5;">
             <h1>TROUVEZ VOTRE <br> PROCHAIN CANDIDAT</h1>
-            <!--     card ---->
+            <!--- card -->
             <div id="hideData">
             {% for  data in repository  %}
             <div class="card_div">
@@ -63,13 +55,13 @@
                    <span>
                     <img class="profil"src="{{asset('img/cv.png')}}">
                    </span>
-                   <span class="font-weight-bold">{{data.username}}
-                   </span>
+                   <!-- <span class="font-weight-bold">{#data.username#}
+                   </span> -->
                  </h5>
                   <h6 class="card-subtitle mb-2 font-weight-bold">
                     <span class="text-dark">Je suis</span> :{{data.title|upper}}
                   </h6>
-                  <!--- video candidat --->
+                
                   <div>
                     <video width="100%" height="315" src="{{data.video}}" controls="true">
                     </video> 

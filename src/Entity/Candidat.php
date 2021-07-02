@@ -47,6 +47,11 @@ class Candidat
      */
     private $Postal;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $city;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +125,18 @@ class Candidat
     public function setPostal(string $Postal): self
     {
         $this->Postal = $Postal;
+
+        return $this;
+    }
+
+    public function getCity(): ?string
+    {
+        return $this->city;
+    }
+
+    public function setCity(?string $city): self
+    {
+        $this->city = $city;
 
         return $this;
     }

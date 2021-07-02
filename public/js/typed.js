@@ -407,7 +407,7 @@
         // shuffle the strings
         shuffle: false,
         // time before backspacing
-        backDelay: 500,
+        backDelay: 0,
         // loop
         loop: false,
         // false = infinite
@@ -448,7 +448,7 @@
 
   $(function(){
       $("#quote").typed({
-        strings: [" ça jamais était si facile pour trouver le job de vos rêves,<br/>et un candidat motivé.Avec Wojob vous pouvez désormais ,<br> trouver un job ou  trouver un candidat"],
-        typeSpeed: 50
+        strings: [" ça jamais était si facile pour trouver le job de vos rêves ou un candidat motivé. Avec Wojob vous en pouvez désormais"],
+        typeSpeed: 0
       });
   });
