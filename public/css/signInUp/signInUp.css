@@ -1,11 +1,10 @@
-body main{
-	margin-top:8%;
-}
+
 body h1{
 	font-weight:bold;
 	color:blue;
 	font-size:15px;
 }
+
 h1 span{
 	background-color:#4f0093;
 	padding:2px;
@@ -20,6 +19,11 @@ form{
 	margin-bottom:170px;
 
 }
+form#signin {
+position: absolute;
+top: 20%;
+left: 39%;
+}
 .form-control{
 	padding:15px;
 }
@@ -31,10 +35,8 @@ button{
 	border-radius: 40px;
 	margin-bottom:20px;
 }
-
-
 #signup {
-  background-color:#3f2893
+  background-color:black
 }
 
 #signup form {
@@ -59,4 +61,8 @@ button{
 button img{
 	width:20px;
 	margin-right:10px;
+}
+
+body{
+	background-color:black
 }

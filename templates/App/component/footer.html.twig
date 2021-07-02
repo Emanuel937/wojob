@@ -1,7 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <link href="{{ asset('css/page/footer.css') }}" rel="stylesheet"/>  
+     <link href="{{ asset('css/page/footer.css') }}" rel="stylesheet"/> 
+     <style>
+      .form_pos{
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        background-color:rgba(0, 0, 0, 0.2);
+        overflow-x: hidden;
+
+      }
+    
+ 
+     #formVideo::placeholder{
+       color: #faf7f7;
+     }
+     #formVideo  .form-control::placeholder {
+        color: #ffffffd9;
+      }
+    .wojob-alert{
+      border: 1px solid rgba(0, 0, 0, 0.125);
+      border-radius: 0.25rem;
+      width:450px;
+      background-color: #fff;
+      margin: auto;
+      position: relative;
+     transition: top 0.5s;
+     position: fixed;
+     top: 100%;
+     left: 41%;
+   }
+      .wojob-alert-body{
+        padding:10px
+      }
+     </style>
   </head>
    <body>
     <div id="footer"></div>
@@ -72,13 +108,37 @@
         </p>
         <hr>
       </div>
-      <!-- studio annonce -->
+      <!-- 
+       ========= the beginnner of  studio annonce ================
+       =================== ***********************================
+       ***********************************************************
+      -->
+      <form  id="studioAnnonceForm" class="form_pos">
+      <!-- the end of alert info -->
+         <!--
+      ************
+      *********** alert info
+      ********** 
+      -->
+      <div class="wojob-alert bg-white text-dark">
+        <div class="alert alert-info">
+         <h5> <i class="fas fa-info-circle"></i> Info:</h5>
+        </div>
+        <div class="wojob-alert-body">
+          <p> Cher utiliser , Vous devez vous connecter avant de faire un annonce, sinon ne vas pas être publier</p>
+          <p>
+            <a href="#">cliquer ici pour se connecter</a>
+          </p>
+          <hr>
+          <button type="button" onclick="closeAlert()" class="btn " style="background:radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(70, 235, 252) 100%">Ok</button>
+        </div>
+      </div>
       <div id="studioAnnonce">
         <div id="stutioAnnonceA">
           <p>
-            <span id="closeButtonAnnonce">x</span>
+            <span class="text-danger-close"  id="closeButtonAnnonce">x</span>
           </p>
-          <p style="color:#007bff">
+          <p>
           Je suis un recruteur je vais:
           </p>
           <h1 class="h3 text-white text-center  font-weight-bold">
@@ -89,14 +149,15 @@
           <h2 class="h4 text-white">
            Nom de l'entreprise:
           </h2>
-          <input class="form-control" type="text" placeholder="Ex.:Wojob" name="entreprise"/>
+          <input class="form-control not" type="text" placeholder="Ex.:Wojob" name="entreprise"  />
           <h2 class="h4 text-white">Numero de l'entreprise:
           </h2>
-          <input class="form-control" type="text" placeholder="Ex.:07xxxxx " name="tel">
+          <input class="form-control" type="text" placeholder="Ex.:07xxxxx " name="tel" required/>
+        
           <h2 class="h4 text-white">
             <i class="fas fa-file-signature">
             </i> Contrat :
-            <select name="contrat">
+            <select name="contrat" required>
               <option value="cdd">
                 CDD
               </option>
@@ -112,42 +173,45 @@
             </select> 
           </h2>
           <h2 class="h4 text-white">Je cherche:</h2>
-          <input class="form-control" type="text" name="title" placeholder="ex.:un informatique dans le web" id="entreprise">
+          <input class="form-control" type="text" name="title" placeholder="ex.:un informatique dans le web" id="entreprise" required>
           <hr>
           <h2 class="h4 text-white">
             <i class="fas fa-map-marker-alt"></i>Adress de l'entreprise:
           </h2>
           <p class="text-white">
             <strong>Ville:
-              <input type="text" placeholder="Ex:Paris" name="city">
+              <input type="text" placeholder="Ex:Paris" name="city" required>
             </strong>
             <strong>Code Postal:
-              <input type="number" placeholder="Ex:75001" name="codePostal" pattern="[0-9]*">
+              <input type="number" placeholder="Ex:75001" name="codePostal" pattern="[0-9]*" required>
             </strong>
           </p>
           <p class="text-white">
             <strong> Adress:
-              <input name="adress" placeholder="35 rue du rhone">
+              <input name="adress" placeholder="35 rue du rhone"  required >
             </strong>
           </p>
           <h2 class="h4 text-white">Salaire:
-           <span class="text-danger">20$/</span>
+          
+          {% verbatim %}
+           <span class="text-white" id="money">100$/</span>
+          {% endverbatim %}
            <select name="mois">
-             <option>heure</option>
+             <option >heure</option>
              <option>Mois</option>
+             <option>Année</option>
            </select>
           </h2>
-          <input min ="0" type="range" max="100000"name="salaire">
+          <input min ="0" type="range"  value= "100" max="100000"name="salaire"   onchange="money(event)" required>
           <hr>
           <div id="description">
             <h2 class="h4 text-white">LA MISSION:</h2>
-            <textarea placeholder=" Descrivez en quelques mots la mission que vouz proposez:" name="mission">
-             
+            <textarea placeholder=" Descrivez en quelques mots la mission que vouz proposez:" name="mission" required>
             </textarea>
             <h2 class="h4 text-white">
              Profil recherché
             </h2>
-            <textarea placeholder=" Descrivez en quelques mots la mission que vouz proposez:" name="profil">
+            <textarea placeholder=" Descrivez en quelques mots la mission que vouz proposez:" name="profil" required>
             </textarea>
           </div>
           <button id="publier">
@@ -157,32 +221,38 @@
             preview mon annonce
           </button>
         </div>
-        <div id="studioAnnonceB"></div>
+        </form>
+        <!-- 
+        *****************************************************************************
+        ===================== the end of make annonce studio ========================
+        *****************************************************************************
+        -->
+        <div id="studioAnnonceB">
+        </div>
         <div id="done">
            <img src='/img/done.jpg' class='imgAjax'>
-           <p class='text-center text-success '>Votre annonce fut publié</p>
+           <p class='text-center text-white h4'>Votre annonce fut publié</p>
            <p id="back">
             <i class='fas fa-long-arrow-alt-left' >
             </i>
              GO back 
            </p>
            <p class="text-center" id="seeAnnonce">
-            <a href="#" >Voir mon annonce</a>
+            <a href="#" class="text-white h6" id="annonceLink">Voir mon annonce</a>
            </p>
         </div>
       </div>
-    <!--- studio cv --->
+    <!--- studio cv -->
+     <form  id="formVideo">
       <div id="studioVideoCv">
         <p>
-          <span id="closeVideoCv">x</span>
+          <span class="text-danger-close" id="closeVideoCv">x</span>
         </p>
-        <p style="color:#007bff" classs="font-weight-bold">
+        <p  classs="font-weight-bold">
          Je suis un candidat je vais:
         </p>
-      <form onsubmit="submitFnc(event)" id="formVideo">
-        <!-- publier cv -->
         <h1 class="h3 text-white text-center font-weight-bold ">
-          <i class="fas fa-video"style="color:#4f0093"></i>
+          <i class="fas fa-video"></i>
           Publier ma video cv
         </h1>
         <h2 class="h4 text-white">
@@ -206,13 +276,12 @@
           </strong>
         </p>
         <!-- upload cv-->
-
         <div class="dropzone text-center">
             <img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
            <!-- <input type="file" class="upload-input notRequired"  />-->
           </div>
           <p class="text-white text-center">Upload ma video 
-            <strong class="text-danger">cv(*obrigatoire)</strong>
+            <strong class="text-dark">cv(*obrigatoire)</strong>
           </p>
           <p id="cvideo">
             <input id="sortpicture" type="file" name="sortpic" required />
@@ -221,17 +290,18 @@
             <strong class="text-success">cv(*optionnelle)
             </strong>
           </p>
-        <button id="upload" type="submit">Publier ma video cv</button>
-        <button id="preview" style="background-color:#663399">previw ma  video cv</button>
+        <button type="submit" id="preview" style="background-color:#663399" onclick="uploadVideo()">publier</button>
       </div>
        <input type="hidden" name="annonceUrl" value="{{path('makeannone')}}" >
      </form>
+     <!-- end of studio -->
        <input type="hidden" id="seeAnnonce" value="{{path('infojob')}}">
        <input type="hidden" id="uploadUrl" value="{{path('upload')}}">
   	</footer>
-    <div id="full"></div>
 <!-- modal -->
 </body>
+<script src="{{ asset('js/emascript.js') }}">
+</script>
 <script src="{{asset('js/uploadAjax.js')}}"> 
 </script>
 <html>
