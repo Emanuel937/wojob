@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&family=Ubuntu+Condensed&display=swap');
 body {
   counter-reset: section;                    /* On initialise le compteur à 0 */
   overflow-x: hidden;
@@ -8,10 +7,27 @@ main{
   margin-bottom:9%;
 }
 main div#bar{
+<<<<<<< HEAD
 	padding:246px;
     background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/img/bola.jpg");
     background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/img/bola.jpg"), url("/img/work.jpg"); /* The least supported option. */
     background-position: 30px;
+=======
+  padding: 246px;
+  background: -webkit-linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url("/img/bola.jpg");
+  background: linear-gradient(rgba(91, 47, 186, 0.98), rgba(70, 90, 167, 0.8)), url("/img/bola.jpg"), url("/img/work.jpg");
+  background-position: 30px;
+}
+
+main #tutorial{
+  background:linear-gradient(rgba(91, 47, 186, 0.98), rgba(70, 90, 167, 0.8)),url("/img/space.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding:200px;
+  margin-top:100px;
+  background-attachment: fixed;
+>>>>>>> wojob-emanuel
 }
 main div button{
 	position: absolute;
@@ -25,32 +41,34 @@ main div button{
     box-shadow: 3px 4px 1px 6px white;
 }
 main a{
-	background-color:#4f0093;
+	background-color:#1c1b40; 
 	color:white;
 	border-radius:10px;
 	padding:8px;
 	margin:12px;
 }
-main .h4{
-	margin-top:50px;
-    font-weight: bold
+main .h2{
+	margin-top:70px;
+  margin-bottom: 20px;
+    font-weight: bold;
+    color:#201b32;
 }
-main h1{
-    font-family: 'Patrick Hand'
+main h1, main h2, main h3, main h4, main h5{
+  font-family: 'Ubuntu Condensed', sans-serif;
 }
 main #seconddiv{
 	width:50%;
 	margin:auto;
 }
 main #slicedivr{
-	background: #FCFCF7;
+	background: #1c1b40;
     transform: skew(0,-3deg);
     padding: 18px;
     position: relative;
-    top: 44px;;	
+    top: 50px;;	
 }
 main #slicedivf{
-	background: #FCFCF7;
+	background:#1c1b40;
     transform: skew(0,3deg);
     padding: 28px;
     position: relative;
@@ -107,12 +125,11 @@ article::before{
     background:#007bff;
 }
 */
-main article{
-    border-top: 1px solid #4f0093;
-}
+
 main #tdiv{
-	background-color:#fcfcf7;
+	background-color:#1c1b40;
 	padding:100px;
+  color:#cfcfcf
 }
 main #videocv img{
 	width:50px;
@@ -139,7 +156,11 @@ main ol li{
 main ol li::before{
     counter-increment: section;
     content: counter(section) ".";
+<<<<<<< HEAD
     color: #a3e5fd;
+=======
+    color: #007bff;
+>>>>>>> wojob-emanuel
     font-family: "Agrandir Tight",Arial,Helvetica,sans-serif;
     font-weight: 500;
     font-size: 31px;
@@ -149,8 +170,13 @@ main ol li::before{
     border-radius: 100%;
     padding-left: 13px;
     padding-right: 13px;
+<<<<<<< HEAD
     background:linear-gradient(rgba(150, 158, 223, 0.8), rgba(230, 96, 153, 0.8));
     border:3px solid #a3e5fd;
+=======
+    background:#291f41;
+    border:1px solid #007bff;
+>>>>>>> wojob-emanuel
     
 }
 main div ul {
@@ -165,17 +191,17 @@ main div li {
 }
 main #bar-video{
     padding: 90px;
-    background-color:#fcfcf7;
+    background-color:#1c1b40;
     margin-top: -31px;
-    border-top:1px solid #4f0093;
+    color:#cfcfcf
 
 }
 main #done{
-	background-color:#fcfcf7;
+	background-color:#cfcfcf;
     border-radius:4px;
 }
 main #doneb{
-	background-color:#fcfcf7;
+	background-color:#1c1b40;
     padding:80px;
     border-radius: 4px;
     position: relative;
@@ -195,8 +221,13 @@ span::after{
     background:red;
 }*/
 main article{
+<<<<<<< HEAD
     padding: 100px;
    background: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 193, 0.8));
+=======
+    padding: 50px;
+   background:#1a193d;
+>>>>>>> wojob-emanuel
 
     
 }
@@ -205,7 +236,7 @@ main #recruteur i{
 }
 
 main #b_slicedivr{
-    background: #FCFCF7;
+    background: #1c1b40;
     transform: skew(0,3deg);
     padding: 26px;
     position: relative;
@@ -213,7 +244,7 @@ main #b_slicedivr{
 }
 
 main #b_slicedivf{
-    background: #FCFCF7;
+    background: #1c1b40;
     transform: skew(0,-2deg);
     padding: 28px;
     position: relative;
@@ -221,17 +252,162 @@ main #b_slicedivf{
 }
 
 main .avantages{
-    background-color: #4f568c;
+    background-color: #1c1b40;
     width: 500px;
     margin: auto;
     border-radius: 20px;
-    color: white;
+    color: #cfcfcf;
     padding: 20px;
 }
 main p{
     color:#3f3d3d
 }
+<<<<<<< HEAD
 /**  phone animation */
+=======
+main .first_line{
+  background-color: blue;
+  padding: 1px;
+  width: 20%;
+}
+main p#square{
+  background-color: blue;
+padding: 21px;
+width: 53px;
+
+position: absolute;
+left: 97%;
+bottom: -1000px;
+}
+/**  phone animation */
+main .text-white{
+  color:#29ff36 !important
+}
+main p#icon_video{
+  font-size:70px
+}
+
+/**
+
+**/
+#price{
+  width: 67%;
+  margin:auto;
+  height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          padding: 140px 0;
+}
+#price .card{
+  position: relative;
+  max-width: 300px;
+  height: auto;
+  background: linear-gradient(-45deg,#fe0847,#feae3f);
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  -webkit-box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 15px rgba(0,0,0,.1) ;
+-webkit-transition: .5s;
+transition: .5s;
+}
+#price .card:hover{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+#price .col-md-4:nth-child(1) .card ,
+#price .col-md-4:nth-child(1) .card .title .fa{
+  background: linear-gradient(-45deg,#f403d1,#64b5f6);
+
+}
+#price .col-md-4:nth-child(2) .card,
+#price .col-md-4:nth-child(2) .card .title .fa{
+  background: linear-gradient(-45deg,#ffec61,#f321d7);
+
+}
+#price .col-md-4:nth-child(3) .card,
+#price .col-md-4:nth-child(3) .card .title .fa{
+  background: linear-gradient(-45deg,#24ff72,#9a4eff);
+
+}
+#price .card::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: rgba(255, 255, 255, .1);
+z-index: 1;
+-webkit-transform: skewY(-5deg) scale(1.5);
+        transform: skewY(-5deg) scale(1.5);
+}
+#price .title .fa{
+  color:#fff;
+  font-size: 60px;
+  width: 100px;
+  height: 100px;
+  border-radius:  50%;
+  text-align: center;
+  line-height: 100px;
+  -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+          box-shadow: 0 10px 10px rgba(0,0,0,.1) ;
+
+}
+.title h2 {
+  position: relative;
+  margin: 20px  0 0;
+  padding: 0;
+  color: #fff;
+  font-size: 28px;
+ z-index: 2;
+}
+#price .price,.option{
+  position: relative;
+  z-index: 2;
+}
+#price .price h4 {
+margin: 0;
+padding: 20px 0 ;
+color: #fff;
+font-size: 60px;
+}
+#price .option ul {
+  margin: 0;
+  padding: 0;
+
+}
+#price .option ul li {
+margin: 0 0 10px;
+padding: 0;
+list-style: none;
+color: #fff;
+font-size: 16px;
+}
+#price .card a {
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  color : black;
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 40px;
+  display: block;
+  text-align: center;
+  margin: 20px auto 0 ;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+
+}
+#price .card a:hover{
+    text-decoration: none;
+}
+
+
+>>>>>>> wojob-emanuel
 
 .Phone {
     position: relative;
@@ -240,7 +416,11 @@ main p{
     width: 1em;
     height: 1em;
     font-size: 5vmin;
+<<<<<<< HEAD
     background-color: #5934db;
+=======
+    background-color: #1a193d;
+>>>>>>> wojob-emanuel
     border-radius: 4px;
     box-shadow:
       0 0 0 0em rgba(#3498db, 0),

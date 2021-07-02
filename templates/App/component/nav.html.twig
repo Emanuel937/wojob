@@ -26,12 +26,7 @@
   </ul>
   <ul id="third">
     {% if app.session.get('email') %}
-      <a href="{{path('user')}}"><span>
-       <img class="profil"src="{{asset('img/cv.png')}}" style="width:40px; height:40px; border-radius:100%">
-      </a>
-      <span id="nameUser">
-        {{app.session.get('email')|slice(0,1)|upper  }}
-      </span>
+      
       <li class="icons">
        <a><i class="fas fa-bell"></i></a>
       </li>
@@ -47,6 +42,9 @@
           </i>
         </a>
       </li>
+      <a href="{{path('user')}}">
+       <img class="profil"src="{{asset('img/cv.png')}}" style="width:40px; height:40px; border-radius:100%">
+      </a>
     {% else %}
       <a href="{{path('signin')}}" id="signin">
         connecter 

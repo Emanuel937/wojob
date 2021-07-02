@@ -22,7 +22,11 @@ class AnnonceRepository extends ServiceEntityRepository
     {
         return $this->createQueryBuilder('a')
             ->orderBy('a.id', 'DESC')
+<<<<<<< HEAD
             ->setMaxResults(7)
+=======
+            ->setMaxResults(9)
+>>>>>>> wojob-emanuel
             ->getQuery()
             ->getResult()
         ;

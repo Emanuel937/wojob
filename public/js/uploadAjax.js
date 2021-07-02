@@ -26,7 +26,10 @@
     timer = 0,
     studio;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> wojob-emanuel
  $("#studioAnnonceButton").click(function(){
    $("#studioAnnonce").css({
       "width":" 400px",
@@ -75,9 +78,14 @@
  *  user remove from the inspecter 
  *  use the function required from emascript.js
  */
+<<<<<<< HEAD
 formForAnnonce.required();
 formVideo.required();
 
+=======
+let form_annonce_child =  document.querySelector("#studioAnnonceForm");
+requiredFnc(form_annonce_child);
+>>>>>>> wojob-emanuel
 /**
  * 
  * *******************************
@@ -141,6 +149,7 @@ const closeAlert  =()=> {
       }, 4000);
     });
 
+<<<<<<< HEAD
     
 
  /*******************************
@@ -149,6 +158,15 @@ const closeAlert  =()=> {
 //get the value of all input for studio annonce
  
 $("#publier").click(()=>{
+=======
+/*******************************
+ ***********make annonce *******
+ *******************************/
+
+//get the value of all input for studio annonce
+$("#publier").click((e)=>{
+  e.preventDefault();
+>>>>>>> wojob-emanuel
   res = null;
   input = document.querySelectorAll("#studioAnnonce input");
   textarea = document.querySelectorAll("textarea");
@@ -167,6 +185,7 @@ $("#publier").click(()=>{
   timer = 0;
   studio =  document.getElementById("stutioAnnonceA");
 
+<<<<<<< HEAD
   let setup = {
     url:url,
     type:"post",
@@ -210,6 +229,8 @@ $("#publier").click(()=>{
         }
     },
   }
+=======
+>>>>>>> wojob-emanuel
   if(ap_s_e.value == false || ap_s_e.value == " " 
       || ap_s_e.value == "" )
     {
@@ -217,6 +238,7 @@ $("#publier").click(()=>{
         "top":"20%"
       });
     }else{
+<<<<<<< HEAD
       // continue later with required
       setup.sendRequest();
     }
@@ -227,11 +249,82 @@ function money(e){
 }
  
 function uploadVideo(){
+=======
+
+      requiredFnc(form_annonce_child);
+      if(psxesodopdohpaeoi == 1){
+        $.ajax({
+        // set data
+        url:url,
+        type:"post",
+        data:{
+          entreprise:entreprise,
+          title:title,
+          contrat:contrat,
+          tel:tel,
+          salaire:salaire,
+          mission:mission,
+          profil:profil,
+          city:city,
+          mois:mois,
+          codePostal:codePostal,
+          adress:adress
+        },
+        success:function(data){
+          if(data !="wobojb-4" && data != "wojob200"){
+            studio.style.display ="none";
+            let intervalSet = setInterval(imgProcessing
+              ,1000);
+              
+              function imgProcessing(){
+                timer++;
+                $("#studioAnnonceB").html("<img src='/img/processing.gif' class='imgAjax'><p class='text-center'>processing ... </p>");
+                if(timer == 3){
+                  clearInterval(intervalSet);
+                  //show the done image
+                  $('#studioAnnonceB').hide();
+                  $("#done").show();
+                  $("#annonceLink").attr("href","infojob?id="+data);
+                  $("#back").click(function(){
+                    $("#done").hide();
+                    studio.style.display ="block";
+                  })
+                }
+            }}else{
+              console.log(data);
+            }
+          }
+        });  
+     }else{
+      $(".wojob-alert").css({
+        "top":"20%"
+      });
+    }
+  }
+});
+
+function money(e){
+  $("#money").html(new Number(e.target.value).toFixed(2) +"$/");
+}
+
+/**
+ * 
+ * upload function 
+ * that upload video cv 
+ * 
+ */
+function uploadVideo(e){
+  e.preventDefault();
+>>>>>>> wojob-emanuel
   if(ap_s_e.value == false || ap_s_e.value == " " 
   || ap_s_e.value == "" )
   {
     $(".wojob-alert").css({
       "top":"20%"});
+<<<<<<< HEAD
+=======
+      
+>>>>>>> wojob-emanuel
   }else{
   // continue later with required
     var file_data = $("#sortpicture").prop("files")[0];   
@@ -257,8 +350,13 @@ function uploadVideo(){
         processData: false,
         data: form_data,                         
         type: 'post',
+<<<<<<< HEAD
         success: function(e){
           alert(data);
+=======
+        success:function(data){
+           console.log(data);
+>>>>>>> wojob-emanuel
         }
     }); 
   }

@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpKernel\KernelInterface;
 
-
 class PageController extends AbstractController
 {
 
@@ -19,6 +18,14 @@ class PageController extends AbstractController
 	public function home(){
         
 		return $this->render("App/page/Home.html.twig");
+	}
+
+	 /**
+     * @Route("/studio_video", name="studioVideo")
+     */
+	public function studio_annonce(){
+        
+		return $this->render("App/page/studio_make_annonce.html.twig");
 	}
 
     /**
@@ -108,14 +115,14 @@ class PageController extends AbstractController
         		$candidat->setTitle($title);
         		$candidat->setVideo($email.".".$extension_v);
         		$candidat->setTel($tel);
-        		$candidat->setCity($city);
+        		//$candidat->setCity($city);
         		$candidat->setPostal($postal);
-        		$candidat->setCv($cv);
+        		$candidat->setCv("cv come here ");
         		$candidat->setEmail($email);
         		$manager->persist($candidat);
         		$manager->flush();
 
-        	$codeStatus = $res = "saved";
+        	  $codeStatus = $res = "saved";
 
          	}
 

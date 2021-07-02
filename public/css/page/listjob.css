@@ -1,33 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 main #bg_bar div{
-	width: 50%;
+	width: 80%;
 	
     margin:auto;
 }
 main article{
-	width: 50%;
-    margin: auto;
+	width: 99%;
+    margin-left: 12%;
 
+}
+.green{
+	color:#0eff6c
+}
+h1.text-white{
+	font-size: 21px;
+margin-top: 33px;
 }
 main #bg_bar{
 	
-background-image: linear-gradient(270deg,rgba(41,147,209,.5) 0,rgba(77,210,184,.5)),url('/img/wojob_bar_list.jpg');
+background-image:linear-gradient(rgba(91, 47, 186, 0.6), rgba(70, 90, 167, 0.5)),url('/img/wojob_bar_list.jpg');
 background-size: cover;
-padding:90px;
+padding:22px;
 border-bottom: 2px solid #0152c7
  
 }
 main div div #span{
 	text-align: center;
-    margin: 27px;
+   
 }
 main article{
-	margin-top:40px;
-    background-color:black;
-    padding: 20px;
-    border-radius: 18px;
-    color:white;
-    border: 3px solid #663399;
+	margin-top: 40px;
+	border:1px solid #ccc;
+	padding: 20px;
+	border-radius: 18px;
+	color: black;
 }
 
 main a:hover{
@@ -36,26 +42,22 @@ main a:hover{
 main article p span {
 	font-weight: bold
 }
-main .money{
+main .money, main .contrat{
 	background-color: rebeccapurple;
 	color: white;
-	padding: 5px;
+	padding: 2px;
 	border-radius: 10px;
-	max-width: 25px;
-	width: 10px;
-	margin-left: 72%;
-}
- main .contrat{
-	background-color: rebeccapurple;
-	color: white;
-	padding: 5px;
-	border-radius: 10px;
+	font-size: 13px;
 
 }
 
-main div button {
+main div button#search{
 	margin-top:30px;
-	margin-bottom: 10px
+	margin-bottom: 10px;
+	width:257px
+}
+main .under_span{
+	font-size:14px
 }
 
 
@@ -88,9 +90,9 @@ main button{
 }
 main h2{
 	font-weight: bold;
-	font-size: 21px;
 	margin-top: 12px;
-	color:#c49bec
+    font-size: 15px;
+    color: #3e3d7b;
 }
 main h3{
 	margin-left: 20px;
@@ -128,22 +130,50 @@ main input::placeholder{
     color: #0152c7;
 
 }
+#hideData{
+	display: flex;
+	flex-wrap: wrap;
+}
+#hideData > a{
+	width:30%;
+	margin: 4px 11px;
+}
 main p a{
 
 	padding: 10px;
 	border-radius: 10px;
 	color: white;
-	background-color: #0152c7;
+	background-color: #1c1b40;
 	margin:1px;
 
 }
-main p{
-	color:white;
-}
+
 
 main .a_bg{
-	background-color:#a3e5fd
+	background-color: #494f8c;
+    color: #0eff6c;
+
 }
 a{
  cursor: pointer
+}
+
+#voix{
+	background-color:#0eff6c;
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+	position: fixed;
+	top: 88%;
+	left: 95%;
+}
+
+.recruter_logos{
+	vertical-align: middle;
+	border-style: none;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	object-fit: cover;
+	border:1px solid #0eff6c
 }

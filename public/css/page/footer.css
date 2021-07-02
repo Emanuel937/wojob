@@ -66,7 +66,11 @@ footer #studioAnnonce{
 	transition: .5s ease;
 	overflow: scroll;
 	background: rgb(63,94,251);
+<<<<<<< HEAD
 	background: radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(238, 70, 252) 100%); 
+=======
+	background: #1c1b40; 
+>>>>>>> wojob-emanuel
 	background-repeat: no-repeat;
 	background-size:cover;
 }
@@ -92,7 +96,8 @@ footer #studioVideoCv .form-control{
 }
 footer .h3{
 	margin-top:10px;
-	margin-bottom:30px
+	margin-bottom:30px;
+	font-size:19px
 }
 footer .h4{
 	margin-top: 32px;;
@@ -163,9 +168,9 @@ footer button#publier, footer button#preview{
 
 footer i{margin-right:20px;}
 footer{
-	background-color: black;
-	padding: 200px;
-	color:white;
+	
+	padding:0px 200px 100px 200px;
+	color:rgb(70, 23, 23);
 }
 #footer{
 	padding: 50px;
@@ -183,14 +188,10 @@ footer h4.linksa a img{
 
 }
 footer ul a {
-	color:white;
+
 	margin-top:12px;
-	font-weight: bold;
+	color:#827a7acf;
 }
-
-
-
-
 
 .container {	
 	width: 300px;
@@ -325,13 +326,21 @@ footer ul a {
 	display:none;
 }
 .text-danger-close{
+<<<<<<< HEAD
 	color: #f4f1f1 !important;
+=======
+	color: rgb(146, 233, 146) !important;
+>>>>>>> wojob-emanuel
 	background-color: #6059fb;
 	padding-bottom: 5px;
 	padding-left: 13px;
 	padding-right: 13px;
 	border-radius: 100%;
 	padding-top: -1px;
+<<<<<<< HEAD
 	border: 1px solid white;
 	box-shadow: 7px 0px 1px 1px #f5ccf959;
+=======
+	box-shadow: 2px 0px 1px 1px #f5ccf959;
+>>>>>>> wojob-emanuel
 }

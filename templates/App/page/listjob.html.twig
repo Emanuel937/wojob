@@ -14,15 +14,19 @@
           <h1 class="text-white text-center"> 
             TROUVER VOTRE PROCHAIN JOB <br>AVEC WOJOB PAR TOUT <br>EN FRANC
           </h1>
-          <p id="span">
-            <span class="text-white font-weight-bold">
-              Mot clé:
-            </span>
-            <input placeholder="informatique, developpeur web , php " name="keys"> 
-            <span class="text-white font-weight-bold" id="span">Ville:
-            </span> 
-            <input placeholder="paris, 7" name="city">
-          </p>
+          <div  class= "row" id="span">
+            <div class="col-md-5" >   
+              <span class="text-white font-weight-bold">
+                Mot clé:
+              </span>
+              <input placeholder="informatique, developpeur web , php " name="keys"> 
+            </div>
+            <div class="col-md-5">  
+              <span class="text-white font-weight-bold" id="span">Ville:
+              </span> 
+              <input placeholder="paris, 7" name="city">
+            </div>
+          </div>
           <button id="search" >
             Je trouve mon job
             <i class="fas fa-search"></i>
@@ -30,12 +34,12 @@
         </div>
       </div>
       <p class="text-center m-5 text-white " >
-        <a class="a_bg" href="{{path('video')}}">
+        <a class="green" href="{{path('video')}}">
           see all video 
         </a>
-        <a id="studioVideoCvButton">  publier video cv
+        <a class="green"id="studioVideoCvButton">  publier video cv
         </a> 
-        <a id="studioAnnonceButton"> je faire un annonce 
+        <a class = "green" id="studioAnnonceButton"> je faire un annonce 
         </a>
       </p>
       <p class="text-center" id="annonceLast">
@@ -44,34 +48,38 @@
       </p>
       <div id="hideData">
         {% for annonceInfo in annonce %}
-        <a  class="lastAnnonce" href="{{path('infojob')}}?id={{annonceInfo.id}}">
+        <a  class="lastAnnonce" href="{{path('infojob')}}?id={{annonceInfo.id}}">         
           <article>
-            <h2> 
-              <strong class="m-2 text-white">
-                JE CHERCHE UN/E:
-              </strong>
-              {{annonceInfo.title|upper}}
+            <h2 class="row"> 
+              <div class='col-md-3'>
+                <img  class="recruter_logos"src="{{asset('img/bola.jpg')}}" alt="logos_entreprise">
+              </div>
+              <div class='col-md-9'>
+                <span style="color: #978c8c;font-weight: normal;font-size:10px">{{annonceInfo.identifient|upper}}</span>
+                <br><strong class="m-2">
+                  JE CHERCHE:
+                </strong>
+                {{annonceInfo.title|upper}}
+              </div>
             </h2>
-            <p>
+            <p style="color:#6a6969">
               <strong class="m-2 text-primary">Mission: 
               </strong>
-              {{annonceInfo.mission|capitalize}}
+              {{annonceInfo.mission|slice(0,150)|capitalize}} ...
+              
             </p>
-            <h3 class="h5">
-              <i class="fas fa-map-marker-alt">
+            <h3 class="h5"> <hr>
+            <i class="fas fa-map-marker-alt">
               </i>
-              <span>{{annonceInfo.city|capitalize}}
+              <span style="font-size:14px">{{annonceInfo.city|capitalize}}
               </span>
-            </h3>
-            <p>
               <span class="contrat">{{annonceInfo.contrat|upper}}
               </span>
-              <span class="money">{{annonceInfo.salaire}}$/Brut
+              <span class="money">{{annonceInfo.salaire}}$
               </span> 
-              <span class="text-dark">
-                <i class="fas fa-eye"></i>
-              </span>
-            </p>
+              <hr>
+              <span  class="under_span">partager </span> <span class="under_span">garder </span> <span class="under_span">postuler/read more </span>
+            </h3>
             </article>
          </a>
         {% endfor %}
@@ -80,7 +88,10 @@
       </div>
       </div>
     </main>
-    <input type="hidden" value="{{path('searchAnnonce')}}"/>
+    <input type="hidden" name="url_annonce" value="{{path('searchAnnonce')}}"/>
+    <div id="voix" title="cherger par la voix">
+      voix
+    </div>
   </body>
     {% include 'App/component/footer.html.twig'%}
     <script>
@@ -90,17 +101,20 @@
         let hide_value= $("input[type='hidden']").val();
         let city = $("input[name='city']").val();
         let key= $("input[name='keys']").val();
+        let url_= $("input[name='url_annonce'").val();
+        
         if(hide_value !=false)
         {
           if(key !=false)
           {
-           $.post(hide_value,
+           $.post(url_,
             {key:key,
              city:city
             },function(data)
             {
               $("#hideData").hide("1000",()=>{
                 $("#showData").html(data);
+                alert(data);
               })
             });     
           } 

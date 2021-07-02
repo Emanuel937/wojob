@@ -6,32 +6,37 @@ header{
 	display: flex;}
 
 header #signin{
+<<<<<<< HEAD
 	background-color: #9f82ee;
+=======
+	background-color:#1c1b40;
+>>>>>>> wojob-emanuel
 	margin: 20px;
 	padding: 3px 9px 3px 9px;
 	color: white;
 	border-radius: 33px;
 }
 header #signup{
-    background-color:#4f0093;
+    background-color:#29ff36 !important;
 	margin: 20px;
 	padding:3px 9px 3px 9px;
-	color: white;
+	color:black;
 	border-radius: 33px;	
 }
+
 img.profil{
 	 width: 40px;
 	 height:40px;
 	 border-radius:100px
 }
 #first{
-	width:26%;
+	width:33%;
 }
 #second{
-	width:54%;
+	width:33%;
 }
 #third{
-	width:19%;	
+	width:33%;	
 	text-align: center
 }
 span#nameUser{
@@ -55,7 +60,7 @@ header ul li{
 	padding:34px;
 } 
 header a i{
-	color:gray;
+	color:#1c1b40;
 	font-size:30px;
 }
 #sitename span{
@@ -63,7 +68,7 @@ header a i{
     font-weight: bold;
 }
 #sitename span span{
-	background-color:#4f0093;
+	background-color:#1c1b40;
 	color: white;
 	border-radius: 13px;
 	padding: 4px;

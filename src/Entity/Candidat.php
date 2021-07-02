@@ -47,6 +47,14 @@ class Candidat
      */
     private $Postal;
 
+<<<<<<< HEAD
+=======
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $city;
+
+>>>>>>> wojob-emanuel
     public function getId(): ?int
     {
         return $this->id;
@@ -123,4 +131,19 @@ class Candidat
 
         return $this;
     }
+<<<<<<< HEAD
+=======
+
+    public function getCity(): ?string
+    {
+        return $this->city;
+    }
+
+    public function setCity(?string $city): self
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+>>>>>>> wojob-emanuel
 }
