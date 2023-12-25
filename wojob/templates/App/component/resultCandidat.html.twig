@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+<!--card -->
+  {% for  data in repository  %}
+  <div class="card_div" id="hideData">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">
+         <span>
+          <img class="profil"src="{{asset('img/cv.png')}}">
+         </span>
+         <span class="font-weight-bold">{{data.username}}
+         </span>
+       </h5>
+        <h6 class="card-subtitle mb-2 font-weight-bold">
+          <span class="text-dark">Je suis</span> :{{data.title|upper}}
+        </h6>
+        <!--- video candidat -->
+        <div>
+          <video width="100%" height="315" src="{{data.video}}" controls="true">
+          </video> 
+        </div>
+         <hr>
+         <div>
+           <button class="btn">
+            <i class="fas fa-mobile-alt"></i>
+           {{data.tel}}
+           </button>
+           <button class="card-link btn">
+              <i class="fas fa-download"></i> Telecharger cv en pdf
+           </button>
+            <button  class="card-link btn text-white">
+              <i class="fas fa-share-alt">
+              </i>Partager</button>
+            <input type="hidden" name="url_candidat" value="{{path('searchcandidat')}}">
+         </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+{% endfor%}
+</body>
+<html>

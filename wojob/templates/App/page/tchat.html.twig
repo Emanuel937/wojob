@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'App/signInUp/links.html.twig' %}
+    <link href="{{ asset('css/page/tchat.css') }}" rel="stylesheet"/>
+  </head>
+  <body>
+  	<header>
+       {% include 'App/component/nav.html.twig'%}
+  	</header>
+    <main>
+       <section class="row">
+            <article class=" card col-md-3 p-0">
+                <div class="nav-header-style p-3">
+                    <h1 class="h6">Filter:
+                        <select>
+                            <option>Recruteur</option>
+                            <option>Wojob-equipe</option>
+                            <option> Posted</option>
+                            <option> Loved </option>
+                            
+                        </select>
+                    </h1>
+                </div>
+                {% for x in user_infos %}
+                <div class="row pl-4 pt-2 ibox_infos"  onclick ="iboxFunction('{{x.id}}', '{{x.pronom|trans}}')">
+                    <div  class="col-md-3">
+                        <img class=" user-img" alt="the online user image" src="{{asset('/img/back.jpg')}}">
+                    </div>
+                    <div class="col-md-9">
+                        <p class="h6 font-weight-bold">{{x.pronom}}</p>
+                        <p> some simples mensagem come over here ...</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </article>
+            <div class="col-md-9 p-0">
+                <div class="d-flex justify-content-around p-1">
+                  <div class="to_id_set">
+                    <img  class="user-img-center" alt="the online user image" src="{{asset('/img/back.jpg')}}" > 
+                     <span class=" h6 font-weight-bold" id="to_name"> USER NAME </span>
+                  </div>
+                  <div>
+                    <input type="search"  class="form-control" placeholder="search ...">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-9">
+                       <div class="box-tchat" id="insert_text"> 
+                        </div>
+                       <div class="row ml-2">
+                            <div class="col-md-7">
+                                <input class="form-control"  id="msg">
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-r" title="send mensage" id="send_btn"><i class="fas fa-paper-plane"></i></button>
+                                <button class="btn btn-r"> <i class="fas fa-ellipsis-v"></i></button>
+                            </div>
+                       </div>
+                    </div>
+                    <div class="col-md-3 pr-3 text-center">
+                        <img  class="user-img-center text-center" alt="the online user image" src="{{asset('/img/back.jpg')}}" > 
+                        <p class="p-2">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec dapibus enim. Sed eget porta eros. </p>
+                        <i class="far fa-star"></i> <i class="far fa-star"></i> <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <p> <i class="fas fa-map-pin"></i> : France</p>
+                    </div>
+                </div>
+            </div>
+       </section>
+    </main>
+    <footer>
+    </footer>
+    <input type="hidden" value="{{path('chat')}}" id="url_input">
+    <input type="hidden" value="{{path('texts')}}" id="texts">
+    <script src="{{asset("js/chat.js")}}">
+    </script>
+</html>

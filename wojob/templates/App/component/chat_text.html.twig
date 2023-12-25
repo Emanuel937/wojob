@@ -1,0 +1,14 @@
+
+{% for x in msg %}
+    {% if x.id == corrent_user %}
+        <p>
+            <span class="corrent-user"> {{x.message_text}} </span>
+        </p>
+    {% else %}
+        <p> 
+            <span class="matcher">
+                {{x.message_text}}
+            </span>
+        </p>   
+    {% endif %} 
+{% endfor %}

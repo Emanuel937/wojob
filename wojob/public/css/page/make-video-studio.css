@@ -1,0 +1,38 @@
+body{
+    margin:0;
+    padding: 0;
+    overflow-x: hidden;
+}
+main {
+    background-color:#dfe6ec6e;
+    height: 100vh;
+
+}
+.text-height{
+    line-height: 30px;  
+}
+video{
+    background-color: #2bfe362b;
+    width: 514px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+p,h2{
+    color:gray
+}
+.fa-plus{
+    color: #29ff36 !important;
+}
+.input{
+    border:none;
+    border-bottom:1px solid #ccc;
+    background-color: transparent;
+}
+.btn-primary{
+ 
+    height: 30px;
+    color: #29ff36 !important;
+    border:none;
+    background-color:#1c1b40
+}

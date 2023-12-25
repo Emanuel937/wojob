@@ -1,0 +1,57 @@
+#title h1{
+    color: rgb(35, 44, 122);
+    font-size: 1.75rem;
+    line-height: 2.1875rem;
+    text-align: left;
+    font-style: normal;
+    font-weight: 800;
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    letter-spacing: 0.029375rem;
+    margin: 40px 0px 0.75rem;
+    text-align: center
+ }
+
+main .card{
+	border-top: none;
+	border-bottom: none;
+}
+main i#video i{
+	color:#009cff;
+}
+
+main #cv{
+	width: 100px;
+    margin: auto;
+}
+
+main i{
+	margin-right: 20px;
+}
+main .color_vio{
+	color:#4f0093
+}
+hr:not([size]) {
+    height: 0px;
+}
+
+.card_div{
+	width:720px;
+	margin:auto;
+    margin-top:30px;
+    margin-bottom: 40px
+}
+.card_div img{
+	width:40px;
+	height:40px;
+    border-radius: 100%
+}
+
+.car_div h6{
+	color:#4f0093
+}
+ button.btn{
+	border:1px solid #4f0093;
+}
+button.card-link.text-white{
+	 background-color:#4f0093
+}

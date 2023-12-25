@@ -1,0 +1,58 @@
+  <ul id="first">
+     <li id="sitename" >
+      <a  href="{{path('home')}}"><span class="h3">WO<span>JOB<span></span></span>
+    </li>
+  </ul>
+  <ul class="text-center" id="second" >
+    <li>
+      <a  href="{{path('home')}}"  title ="home" ><i class="fas fa-home"></i>
+      </a>
+    </li>
+    <li>
+      <a  tile="recruter  job" href="{{path('recruter')}}">
+        <i class="fas fa-user-graduate"></i>
+      </a>
+    </li>
+    <li id="video">
+      <a  href="{{path('video')}}">
+        <i class="fas fa-tv"></i>
+      </a>
+    </li>
+    <!--<li>
+      <a><i class="fas fa-dollar-sign"></i></a>
+    </li>-->
+  </ul>
+  <ul id="third">
+    {% if app.session.get('email') %}
+      
+      <li class="icons">
+       <a><i class="fas fa-bell"></i></a>
+      </li>
+      <li class="icons">
+       <a href="{{path('tchat')}}">
+        <i class="fas fa-comment">
+        </i>
+       </a>
+      </li>
+      <li class="icons">
+        <a href="{{path('session')}}"> 
+          <i class="fas fa-sign-out-alt">
+          </i>
+        </a>
+      </li>
+      <a href="{{path('user')}}">
+       <img class="profil"src="{{asset('img/cv.png')}}" style="width:40px; height:40px; border-radius:100%">
+      </a>
+    {% else %}
+      <a href="{{path('signin')}}" id="signin">
+        connecter 
+        <i class="fas fa-sign-in-alt"></i>
+      </a>
+      <a href="{{path('signup')}}" id="signup">
+        S'inscrire     
+        <i class="fas fa-user-plus"></i>
+      </a>
+   {% endif %}
+   <input type="hidden" value ="{{app.session.get('email')}}" id="ap_s_e">
+  </ul>
+  

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'App/signInUp/links.html.twig' %}
+     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/page/nav.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('css/page/infojob.css') }}" rel="stylesheet"/>
+    <style>
+      main{
+        background-color:#f0f2f5;
+        padding-top:80px;
+        padding-bottom:40px;
+      }
+      article{
+        width: 70%;
+        margin: auto;
+        background-color:white;
+        padding: 20px;
+        max-height: 1000px;
+        height: 1000px
+
+      }
+
+      article h1{
+        text-align: center;
+        color: rgb(35, 44, 122);
+        font-size: 1.5rem;
+        line-height: 1.875rem;
+        text-align: left;
+        font-style: normal;
+        font-weight: 800;
+        font-family: Montserrat, Helvetica, Arial, sans-serif;
+        letter-spacing: 0.025rem;
+        margin:20px 0px 20px 0px
+      }
+
+      article h2{
+        font-size:20px;
+        background-color:#fbfcfd;
+        padding:10px;
+        border-radius:10px;
+        font-weight: bold;
+        width:200px;
+      }
+      article button{
+        width: 50%;
+        font-size: 0.9375rem;
+        line-height: 0.9375rem;
+        text-align: center;
+        font-family: Montserrat, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        letter-spacing: 0.016875rem;
+        padding: 0rem 1.125rem;
+        background-color: rgb(1, 82, 199);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(1, 82, 199);
+        border-radius: 2.25rem;
+        cursor: pointer;
+        min-height: 3.1125rem;
+        margin:auto;
+
+       
+      }
+      main h3{
+        margin-top: 87%;
+        text-align: center;
+        background-color: white;
+        padding-top: 30px;
+        margin-left: 117px;
+        padding-bottom: 31px;
+        width:95px;
+        border-radius: 100px;
+        color:#4f0093
+      }
+
+    </style>
+
+  </head>
+  <body>
+  	<header>
+       {% include 'App/component/nav.html.twig'%}
+  	</header>
+  	<main>
+        <div class="row">
+          <div class="col-md-2">
+            <h3>
+              <i class="fas fa-chevron-left">
+              </i>
+            </h3>
+          </div>
+          <div class="col-md-8">
+            <article>
+      
+        <div  class="row">
+          <div class="col-md-6">
+            <h1> <i class="fas fa-search"></i> J'AI CHERCHE :</h1>
+            <h2 class="text-center text-success">
+             {{annonce.title|upper}}
+            </h2>
+
+           <h1>
+             <i class="fas fa-file-signature"></i> Type de contrat
+           </h1> 
+        <h2 class="text-primary">{{annonce.contrat|upper}}</h2>
+        <h1>
+         <i class="fas fa-phone-volume"></i> Appele-moi aux:
+        </h1>
+        <h2 class="text-primary">{{annonce.tel}}</h2>
+
+        <h1> <i class="fas fa-money-bill-alt"></i> Salaire Brut</h1> 
+        <h2 class="text-danger">{{annonce.salaire}}$ /an</h2>
+       
+        </div>
+        <div class="col-md-6">
+          <h1> La mission</h1>
+          <p>{{annonce.mission|capitalize}}</p>
+          <h1>Tâches de la mission</h1>
+          <h1>Profil recherché</h1>
+          <p>{{annonce.profil}}</p>
+          </div>
+          
+        </div>
+
+        <button>Postuler <i class="fas fa-thumbs-up"></i></button>
+      </article>
+            
+          </div>
+          <div class="col-md-2">
+            <h3>
+             <i class="fas fa-chevron-right"></i>
+            </h3>
+          </div>
+        </div>
+      
+    </main>
+  
+    {% include 'App/component/footer.html.twig'%}
+  
+  </body>
+<html>

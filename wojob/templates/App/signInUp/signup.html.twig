@@ -1,0 +1,34 @@
+  <!DOCTYPE html>
+<html>
+  <head>
+    {% include 'App/signInUp/links.html.twig' %}
+    <link href="{{ asset('css/signInUp/signInUp.css') }}" rel="stylesheet"/>
+    <script src="{{asset('js/particular.js')}}"></script>
+  </head>
+  <body id="particles-js">
+    <main>
+      <form id="signin" class="card" action="{{path('signup')}}" method="post">
+         <h1>WO<span>JOB<span></h1>
+        <h2 class="h1">S’identifier</h2>
+        <p>Trouvez vos cadidats ou vos job</sp>
+        <div class="mb-3">
+         <input type="email" class="form-control form-input" id="exampleFormControlInput1" placeholder="name@example.com" name="email" required>
+        </div>
+        <div class="mb-3">
+          <input class="form-control form-input" id="exampleFormControlTextarea1" rows="3"  type="password" name="password"required >
+        </div>
+         <p><a href="#">Mot de passe oublié </a></p>
+        <button class=" text-white" type="submit">
+          S'indentifier
+        </button>
+        <p>Déjà inscrit(e) ? <a href="{{path('signin')}}" class="text-primary text-font-bold">S’identifier</a></p>
+        <p id="or"><span>ou<spna></p>
+        <button  class="text-primary" id="googlebtn"><img src="{{asset('img/google.svg')}}">S'inscrire avec google </button>
+        <p class="text-danger text-center"> {{status}}</p>
+        <p class="text-center text-white">Wojob  &copy; all right reserverd 2021</p>
+      </form>
+    </main>
+  </body>
+  <script   src="{{asset('js/RunParticular.js')}}">
+  </script>
+<html>

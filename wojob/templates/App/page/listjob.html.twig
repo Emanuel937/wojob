@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'App/signInUp/links.html.twig' %}
+    <link href="{{ asset('css/page/listjob.css')}}"rel="stylesheet"/>
+  </head>
+  <body>
+  	<header>
+      {% include 'App/component/nav.html.twig'%}
+  	</header>
+  	<main>
+      <div id="bg_bar">
+        <div>
+          <h1 class="text-white text-center"> 
+            TROUVER VOTRE PROCHAIN JOB <br>AVEC WOJOB PAR TOUT <br>EN FRANCE
+          </h1>
+          <div  class= "row" id="span">
+            <div class="col-md-5" >   
+              <span class="text-white font-weight-bold">
+                Mot clé:
+              </span>
+              <input placeholder="informatique, developpeur web , php " name="keys"> 
+            </div>
+            <div class="col-md-5">  
+              <span class="text-white font-weight-bold" id="span">Ville:
+              </span> 
+              <input placeholder="paris, 7" name="city">
+            </div>
+          </div>
+          <button id="search" >
+            Je trouve mon job
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <p class="text-center m-5 text-white " >
+        <a class="green" href="{{path('video')}}">
+          see all video 
+        </a>
+        <a class="green" href="{{path('m_v_s')}}">  publier video cv
+        </a> 
+        <a class = "green" id="studioAnnonceButton"> je faire un annonce 
+        </a>
+      </p>
+      <p class="text-center" id="annonceLast">
+        <strong> Les denières offres d'emploi
+        </strong>
+      </p>
+      <div id="hideData">
+        {% for annonceInfo in annonce %}
+        <a  class="lastAnnonce" href="{{path('infojob')}}?id={{annonceInfo.id}}">         
+          <article>
+            <h2 class="row"> 
+              <div class='col-md-3'>
+                <img  class="recruter_logos"src="{{asset('img/bola.jpg')}}" alt="logos_entreprise">
+              </div>
+              <div class='col-md-9'>
+                <span style="color: #978c8c;font-weight: normal;font-size:10px">{{annonceInfo.identifient|upper}}</span>
+                <br><strong class="m-2">
+                  JE CHERCHE:
+                </strong>
+                {{annonceInfo.title|upper}}
+              </div>
+            </h2>
+            <p style="color:#6a6969">
+              <strong class="m-2 text-primary">Mission: 
+              </strong>
+              {{annonceInfo.mission|slice(0,150)|capitalize}} ...
+              
+            </p>
+            <h3 class="h5"> <hr>
+            <i class="fas fa-map-marker-alt">
+              </i>
+              <span style="font-size:14px">{{annonceInfo.city|capitalize}}
+              </span>
+              <span class="contrat m-2 p-1">{{annonceInfo.contrat|upper}}
+              </span>
+              <span class="money m-2 p-1">{{annonceInfo.salaire}}$
+              </span> 
+              <hr>
+              <span  class="under_span"><i class="fas fa-share"></i> </span> <span class="under_span"><i class="fas fa-heart text-danger"></i></span> <span class="under_span"><i class="fas fa-book-reader"></i></span>
+              <span class="under_span"><i class="fas fa-paper-plane"></i></span>
+            </h3>
+            </article>
+         </a>
+        {% endfor %}
+      </div>
+      <div id="showData">
+      </div>
+      </div>
+    </main>
+    <input type="hidden" name="url_annonce" value="{{path('searchAnnonce')}}"/>
+    <div id="voix" title="cherger par la voix">
+     <p class="text-center mt-3"> <i class="fas fa-microphone"></i></p>
+    </div>
+      <div aria-label="Page navigation example" style="width:20%;margin:auto; margin-top:70px">
+      <ul class="pagination">
+          <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+          </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+          </a>
+          </li>
+      </ul>
+      </div>
+  </body>
+    {% include 'App/component/footer.html.twig'%}
+    <script>
+      //ajax script 
+      $("#search").click(()=>
+      {
+        let hide_value= $("input[type='hidden']").val();
+        let city = $("input[name='city']").val();
+        let key= $("input[name='keys']").val();
+        let url_= $("input[name='url_annonce'").val();
+        
+        if(hide_value !=false)
+        {
+          if(key !=false)
+          {
+           $.post(url_,
+            {key:key,
+             city:city
+            },function(data)
+            {
+              $("#hideData").hide("1000",()=>{
+                $("#showData").html(data);
+                
+              })
+            });     
+          }
+        }
+      });
+    </script>
+  </body>
+<html>

@@ -1,0 +1,333 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+
+::file-selector-button {
+    font: inherit;
+    background-color:#44038614;
+    color: white;
+    border: none;
+    padding: 9px;
+}
+input{
+	outline: none
+}
+input:focus{
+	border:none;
+}
+footer .dropzone {
+	width: 100px;
+	height: 80px;
+	border: 1px dashed #999;
+	border-radius: 3px;
+	text-align: center;
+	margin: auto;
+}
+
+footer .upload-icon {
+	margin: 25px 2px 2px 2px;
+}
+
+footer .upload-input {
+	position: relative;
+	top: -62px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+}
+
+footer .btn {
+	display: block;
+	width: 140px;
+	height: 40px;
+	background: darkmagenta;
+	color: #fff;
+	border-radius: 3px;
+	border: 0;
+	box-shadow: 0 3px 0 0 hotpink;
+	transition: all 0.3s ease-in-out;
+	font-size: 14px;
+}
+
+footer .btn:hover {
+	background: rebeccapurple;
+	box-shadow: 0 3px 0 0 deeppink;
+}
+
+footer #studioAnnonce{
+	padding: 30px;
+	width: 0;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	right:100%;
+	overflow: hidden;
+	transition: .5s ease;
+	overflow: scroll;
+	background: rgb(63,94,251);
+	background: #1c1b40; 
+	background-repeat: no-repeat;
+	background-size:cover;
+}
+footer #studioVideoCv{  	
+	padding: 30px;
+	width:0px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left:100%;
+	overflow: hidden;
+	transition: .5s ease;
+	overflow: scroll;
+	background: rgb(63,94,251);
+	background:radial-gradient(circle, rgb(63, 94, 251) 0%, rgb(238, 70, 252) 100%); 
+	overflow-x: hidden;
+}
+
+footer #studioVideoCv .form-control{
+	border: 1px solid white;
+	background-color: transparent;
+	color:white;
+}
+footer .h3{
+	margin-top:10px;
+	margin-bottom:30px;
+	font-size:19px
+}
+footer .h4{
+	margin-top: 32px;;
+}
+footer input{
+	margin-bottom: 30px
+}
+footer p span{
+	position: absolute;
+    top: 15px;
+    left: 35px;
+    color: #f1f1f1;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor:pointer;
+}
+footer .h4{
+	font-size:15px;
+	font-weight: bold;
+}
+footer select{
+	
+	border-radius: 20px;
+	height: 25px;
+	color: black;
+	font-size: 16px;
+	width: 113px;
+}
+footer p  input{
+	width:100px;
+	background-color: transparent;
+	color:white;
+	border:none;
+	border-bottom: 1px solid white
+}
+footer input[name='adress']{
+	width: 100%;
+	color:white;
+}
+footer hr:not([size]) {
+    height: 1px;
+    color: white;
+}
+
+footer textarea{
+	height: 300px;
+	width: 100%;
+}
+footer button#publier, footer button#preview{
+	font-size: 0.9375rem;
+	text-align: center;
+	font-family: Montserrat,Helvetica,Arial,sans-serif;
+	font-style: normal;
+	font-weight: 600;
+	padding: 10px 1.125rem;
+	background-color: #0152c7;
+	color: #ffffff;
+	border: 1px solid #0152c7;
+	border-radius: 2.25rem;
+	width: 60%;
+	display: block;
+	margin:auto;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+
+footer i{margin-right:20px;}
+footer{
+	
+	padding:0px 200px 100px 200px;
+	color:rgb(70, 23, 23);
+}
+#footer{
+	padding: 50px;
+	background-color:#4f568c
+
+}
+footer h4.linksa a{
+	margin-right: 40px;
+	margin-left: 30px;
+	margin-top:20px;
+	font-weight: bold;
+}
+footer h4.linksa a img{
+	width:30px;
+
+}
+footer ul a {
+
+	margin-top:12px;
+	color:#827a7acf;
+}
+
+.container {	
+	width: 300px;
+	height: 300px;
+	margin: auto;
+}
+
+.login_bar {
+	width: 300px;
+	height: 50px;
+	background: white;
+	border-radius: 10px;
+	top: 50%;
+	position: relative;
+    z-index: 0;
+	overflow: hidden;
+}
+
+.login {
+	background: transparent;
+	position: absolute;
+	height: 100%;
+	width: 190px;
+	padding-left: 10px;
+	text-align: left;
+	line-height: 50px;
+	vertical-align: middle;
+	z-index: 10;
+	-webkit-transition: transform 0.2s ease-in-out 0s;
+	   -moz-transition: transform 0.2s ease-in-out 0s;
+	     -o-transition: transform 0.2s ease-in-out 0s;
+	        transition: transform 0.2s ease-in-out 0s;
+}
+
+.login_active {
+	-webkit-transform: translateX(300px);
+	   -moz-transform: translateX(300px);
+	    -ms-transform: translateX(300px);
+	     -o-transform: translateX(300px);
+	        transform: translateX(300px);
+}
+
+.subscribe_button:hover{
+	background-color: #222A33;
+	cursor:pointer;
+}
+
+.subscribe_button {
+	background: #171D23;
+	position: absolute;
+	top: -50px;
+	left: 200px;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	height: 150px;
+	width: 100px;
+	text-align: center;
+	line-height: 150px;
+	vertical-align: middle;	
+	color: white;
+	-webkit-transition: transform 0.5s ease 0s;
+	   -moz-transition: transform 0.5s ease 0s;
+	     -o-transition: transform 0.5s ease 0s;
+	        transition: transform 0.5s ease 0s;
+}
+
+.subscribe_button_active{
+	-webkit-transform: translateY(50px);
+	   -moz-transform: translateY(50px);
+	    -ms-transform: translateY(50px);
+	     -o-transform: translateY(50px);
+	        transform: translateY(50px);
+}
+
+.subscribing{
+	background: #CDD4DC;
+	height: 100%;
+	width: 300px;
+	z-index: 5;
+	position: absolute;
+	left:-300px;
+	display: inline-block;
+	-webkit-transition: transform 1s ease 0s ;
+	   -moz-transition: transform 1s ease 0s ;
+	     -o-transition: transform 1s ease 0s ;
+	        transition: transform 1s ease 0s ;
+}
+
+.subscribing_active {
+	-webkit-transform: translateX(300px);
+	   -moz-transform: translateX(300px);
+	    -ms-transform: translateX(300px);
+	     -o-transform: translateX(300px);
+	        transform: translateX(300px);
+}
+
+.thanks{
+	background: transparent;
+	height: 100%;
+	width: 300px;
+	z-index: 5;
+	text-align: left;
+	line-height: 50px;
+	vertical-align: middle;
+	padding-left: 10px;
+	position: absolute;
+	top:50px;
+	display: inline-block;
+	-webkit-transition: transform 0.5s ease 0s ;
+	   -moz-transition: transform 0.5s ease 0s ;
+	     -o-transition: transform 0.5s ease 0s ;
+	        transition: transform 0.5s ease 0s ;
+}
+
+.thanks_active {
+	-webkit-transform: translateY(-50px);
+	   -moz-transform: translateY(-50px);
+	    -ms-transform: translateY(-50px);
+	     -o-transform: translateY(-50px);
+	        transform: translateY(-50px);
+}
+.imgAjax{
+	width: 28%;
+	display: block;
+	margin: auto;
+    margin-top: auto;
+	margin-top: 50%;
+	border-radius:100%
+}
+
+#done{
+	display:none;
+}
+.text-danger-close{
+	color: rgb(146, 233, 146) !important;
+	background-color: #6059fb;
+	padding-bottom: 5px;
+	padding-left: 13px;
+	padding-right: 13px;
+	border-radius: 100%;
+	padding-top: -1px;
+	box-shadow: 2px 0px 1px 1px #f5ccf959;
+}

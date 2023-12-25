@@ -1,0 +1,47 @@
+[33mcommit aaf86666aade6b30e6e6dfeb42e8d57bfe0b1da5[m[33m ([m[1;36mHEAD -> [m[1;32mwojob-emanuel[m[33m)[m
+Author: emanuel937 <emanuelabizimi@gmail.com>
+Date:   Fri Jul 2 10:48:08 2021 +0200
+
+     update version
+
+[33mcommit ee2f48a353307957411194aac428382b4c0e9a19[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: emanuel937 <emanuelabizimi@gmail.com>
+Date:   Sat May 1 03:22:28 2021 +0200
+
+    new version
+
+[33mcommit c4c85b6714d1bb4787ee35d159a9fb38af6cae1b[m
+Author: emanuel937 <emanuelabizimi@gmail.com>
+Date:   Fri Apr 16 12:52:16 2021 +0200
+
+    creating table for database
+
+[33mcommit cfb66c4fa2dbf674ec30929d2d0d10476f974b46[m
+Author: emanuel937 <emanuelabizimi@gmail.com>
+Date:   Fri Apr 16 12:41:50 2021 +0200
+
+    adding the template, controller, script folder from any older project
+
+[33mcommit eede9011242a86fd9193ace2b650dbe176821f3f[m
+Author: emanuel937 <emanuelabizimi@gmail.com>
+Date:   Fri Apr 16 01:29:26 2021 +0200
+
+    creating database with doctrine:database:create cmd
+
+[33mcommit 6516e6b8998722a660a28f987f7bdb6ac2e9ee85[m
+Author: emanuel937 <emanuelabizimi@gmail.com>
+Date:   Fri Apr 16 01:24:52 2021 +0200
+
+    download symfony/orm-pack and symfony/maker-bundle
+
+[33mcommit bf352e62ea627c9fbd749b1f498c41f4694433ca[m
+Author: emanuel937 <emanuelabizimi@gmail.com>
+Date:   Fri Apr 16 01:16:42 2021 +0200
+
+    just testing
+
+[33mcommit 5b4a30817584d8a4a4cb7801f9071d34b0ecfe26[m
+Author: emanuel937 <emanuelabizimi@gmail.com>
+Date:   Fri Apr 16 00:28:28 2021 +0200
+
+    Add initial set of files

@@ -1,0 +1,46 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <main>
+       <div id="hideData">
+        {% for annonceInfo in annonce %}
+        <a  class="lastAnnonce" href="{{path('infojob')}}?id={{annonceInfo.id}}">         
+          <article>
+            <h2 class="row"> 
+              <div class='col-md-3'>
+                <img  class="recruter_logos"src="{{asset('img/bola.jpg')}}" alt="logos_entreprise">
+              </div>
+              <div class='col-md-9'>
+                <span style="color: #978c8c;font-weight: normal;font-size:10px">{{annonceInfo.identifient|upper}}</span>
+                <br><strong class="m-2">
+                  JE CHERCHE:
+                </strong>
+                {{annonceInfo.title|upper}}
+              </div>
+            </h2>
+            <p style="color:#6a6969">
+              <strong class="m-2 text-primary">Mission: 
+              </strong>
+              {{annonceInfo.mission|slice(0,150)|capitalize}} ...
+              
+            </p>
+            <h3 class="h5"> <hr>
+            <i class="fas fa-map-marker-alt">
+              </i>
+              <span style="font-size:14px">{{annonceInfo.city|capitalize}}
+              </span>
+              <span class="contrat">{{annonceInfo.contrat|upper}}
+              </span>
+              <span class="money">{{annonceInfo.salaire}}$
+              </span> 
+              <hr>
+              <span  class="under_span">partager </span> <span class="under_span">garder </span> <span class="under_span">postuler/read more </span>
+            </h3>
+            </article>
+         </a>
+        {% endfor %}
+      </div>
+    </main>
+  </body>
+<html>
